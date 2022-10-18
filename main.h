@@ -19,16 +19,11 @@
 #define S_SHORT 1
 
 /**
+ * struct fmt - Struct op
  *
- *  * struct fmt - Struct op
- *
- *   *
- *
- *    * @fmt: The format.
- *
- *     * @fn: The function associated.
- *
- *      */
+ *@fmt: The format.
+ *@fn: The function associated.
+ */
 struct fmt
 {
 		char fmt;
@@ -38,16 +33,11 @@ struct fmt
 
 
 /**
+ *typedef struct fmt fmt_t - Struct op
  *
- *  * typedef struct fmt fmt_t - Struct op
- *
- *   *
- *
- *    * @fmt: The format.
- *
- *     * @fm_t: The function associated.
- *
- *      */
+ *@fmt: The format.
+ *@fm_t: The function associated.
+ */
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
@@ -118,7 +108,6 @@ char buffer[],
 			int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
-
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
