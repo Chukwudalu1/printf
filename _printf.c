@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		{
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &gbuff_ind);
+				print_buffer(buffer, &buff_ind);
 			/*write(1, &format[i], 1);*/
 			printed_chars++;
 		}
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_ind);
 			flags = get_flags(format, &i);
-			width = getwidth(format, &i, list);
+			width = get_width(format, &i, list);
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
 			++i;
